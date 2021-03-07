@@ -1,0 +1,304 @@
+ .header {
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+	box-shadow: 0 15px 15px 0 rgba(0,0,0,0.1);
+}
+
+/* Верхняя тёмная полоса */
+.top-bar { 
+	padding: 18px 0 18px 0;
+	background-color: #00122f;
+	color: #ffffff;
+}
+
+/* Анонс (заголовок) в верхней полосе */
+.top-bar__anonce {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+}
+.top-bar__h1 {
+	font-size: 16px;
+}
+
+/* Ссылка в верхней полосе */
+.top-bar__link { 
+	text-decoration: underline;
+}
+	
+/* Дата и время в верхней полосе */
+.top-bar__datetime { 
+	font-size: 16px;	
+}
+
+/* Верхняя часть HEADER */
+.menu {
+	display: flex;
+	flex-direction: column;
+	padding-top: 40px;
+	padding-bottom: 35px;
+}
+
+/* Верхняя часть меню */
+.menu__top-part {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu__left-part {
+	display: flex;
+	align-items: center;
+}
+
+/* Кнопка мобильного бургер-меню */
+.mobil-pagination-btn {
+	width: 24px;
+	height: 24px;
+	margin-right: 16px;
+	border: 0;
+	background: url('../img/menu-24px.svg') no-repeat;
+	background-size: cover;
+	cursor: pointer;
+}
+.close-btn {
+	background-image: url('../img/close-24px.svg');
+}
+
+/* Логотип */
+.logo {
+	margin-right: 40px;
+}
+.select-wrapper {
+	display: block;
+	position: relative;
+	font-size: 0;
+}
+.select-wrapper::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 15px;
+	height: 1px;
+	border-bottom: 2px dashed #448ccb;
+}
+.custom-select {
+	max-width: 70px;
+	border: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-size: 16px;
+	padding-right: 10px;
+	background: url('../img/down-arrow_10x10.png') 100% center no-repeat;
+	background-size: auto;
+}
+
+/* Правая половина верхней части */
+.menu__right-part {
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+}
+
+/* Погода */
+.weather {
+	background-image: url('../img/weather_01.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding-left: 30px;
+	color: #91919f;
+	font-size: 16px;
+}
+
+/* Поиск по сайту */
+.search {
+	display: flex;
+	position: relative;
+	min-width: 300px;
+	height: 40px;
+	margin-left: 30px;
+}
+.search input {
+	width: 100%;
+	height: 100%;
+	padding: 16px;
+	background-color: #f3f3f3;
+	border: none;		
+	border-radius: 20px;
+	font-size: 14px;
+}
+.search button {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	right: 15px;
+	top: 12px;
+	background: url('../img/search-24px.svg') no-repeat;
+	background-size: contain;
+	border: 0;		
+	cursor: pointer;
+}
+
+/* Мобильный поиск */
+.mobil-search {
+	display: none;
+}
+
+/* Верхнее горизонтальное меню навигации */
+.pagination {
+	padding-bottom: 35px;
+	font-size: 16px;
+}	
+.pagination__list {
+	display: flex;;
+	max-width: 860px;
+	justify-content: space-between;
+}
+.pagination__item {
+	/*color: #e1e1e4;*/
+}
+
+/* Мобильный HEADER */
+.mobile-header {
+	display: none;
+	flex-wrap: wrap;
+	padding: 14px;
+}
+.mobile-header__top-part {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 14px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #91919f;
+}
+.logo__mobile {
+	margin: 0;
+}
+.mobile-header__bottom-part {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 16px;
+	color: #91919f;
+}
+.mobile-header__time {
+	padding-left: 24px;
+	background: url(../img/icon-time.png) no-repeat;
+	background-size: auto 90%;
+}
+
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media screen and (max-width: 768px) {
+	.top-bar__datetime { 
+		font-size: 14px;	
+	}
+	.menu {
+		padding-top: 20px;
+		padding-bottom: 15px;
+	}
+	.logo {
+		margin-right: 25px;
+	}
+	.pagination {
+		padding: 0;
+	}
+	.pagination__list {
+		display: none;
+	}
+	.mobil-pagination-btn {
+		display: block;
+	}
+
+	/* Мобильное меню навигации */
+	.pagination__list_mobile {
+		display: block; 
+		position: absolute;
+		z-index: 1;
+		padding: 24px;
+		line-height: 30px;
+		background-color: #ffffff;
+	}
+	.search {
+		display: none;
+	}
+	.mobil-search {
+		width: 24px;
+		height: 24px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 16px;
+		border: 0;
+		background: url('../img/search-24px.svg') no-repeat;
+		background-size: cover;
+		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.top-bar__h1 {
+		font-size: 14px;
+	}
+	.top-bar__datetime { 
+		font-size: 13px;	
+	}
+	.weather {
+		/*display: none;*/
+	}
+}
+
+@media screen and (max-width: 460px) {
+	/* Верхняя темная полоса */
+	.top-bar__anonce {
+		justify-content: center;	
+	}
+	.top-bar__datetime { 
+		display: none;	
+	}
+
+	/* Десктопное меню */
+	.menu {
+		display: none;
+	}
+
+	/* Мобильный HEADER */
+	.mobile-header {
+		display: flex;
+	}
+	.pagination__list_mobile {
+		top: 80px;
+	}
+	.logo {
+		margin-right: auto;
+		margin-left: 10px;
+	}
+	.weather {
+		padding-left: 30px;
+		color: #91919f;
+		font-size: 16px;
+	}
+}
+
+
+@media screen and (max-width: 414px) {
+	.menu__city-choice {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 374px) {
+	.menu__top-part {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.top-bar__h1 {
+		font-size: 13px;
+	}
+}

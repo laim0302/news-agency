@@ -1,0 +1,119 @@
+/* Глобальные стили */
+
+html {
+	box-sizing: border-box;
+	min-width: 320px;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    background-color: #f9f9f9;    
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+img {
+    width: 100%;
+    /*max-width: 100%;*/
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
+h1 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+.fixed-container {
+    position: relative;
+    max-width: 940px;
+	/*min-width: 320px;*/
+    width: 100%;
+    /*padding: 0 24px;*/
+	margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.visually-hidden {
+    width: 1px !important;
+    height: 1px !important;
+	position: absolute !important;
+    padding:0 !important;
+    overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	border:0 !important;	
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+
+
+@media screen and (max-width: 990px) {
+    .fixed-container {
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .fixed-container {
+        max-width: 458px;
+    }
+}
+
+
+
+
+
